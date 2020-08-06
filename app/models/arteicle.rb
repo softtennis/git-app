@@ -1,0 +1,2 @@
+class Arteicle < ApplicationRecord
+end
