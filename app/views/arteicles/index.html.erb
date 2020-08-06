@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Arteicles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Text</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @arteicles.each do |arteicle| %>
+      <tr>
+        <td><%= arteicle.title %></td>
+        <td><%= arteicle.author %></td>
+        <td><%= arteicle.text %></td>
+        <td><%= link_to 'Show', arteicle %></td>
+        <td><%= link_to 'Edit', edit_arteicle_path(arteicle) %></td>
+        <td><%= link_to 'Destroy', arteicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Arteicle', new_arteicle_path %>
