@@ -1,3 +1,3 @@
 class Arteicle < ApplicationRecord
-  validates_presencen_of(:title)
+  validates :title, presence: true
 end
